@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Missing Piece - Get the Degree Your Career Already Earned</title>
-  <meta name="description" content="The exact WGU + Sophia system to earn a fully accredited bachelor's degree in under 6 months, under $500, while working full time." />
+  <meta name="description" content="The exact WGU + Sophia system to earn a fully accredited bachelor's degree in under 6 months, while working full time." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -38,7 +38,6 @@
       overflow-x: hidden;
     }
 
-    /* NOISE TEXTURE OVERLAY */
     body::before {
       content: '';
       position: fixed;
@@ -48,7 +47,6 @@
       z-index: 0;
     }
 
-    /* GRADIENT ORBS */
     .orb {
       position: fixed;
       border-radius: 50%;
@@ -61,7 +59,6 @@
     .orb-2 { width: 500px; height: 500px; background: var(--blue); bottom: -100px; right: -100px; }
     .orb-3 { width: 400px; height: 400px; background: var(--cyan); top: 50%; left: 50%; transform: translate(-50%,-50%); }
 
-    /* STICKY FLOAT BUTTON */
     .sticky-buy {
       position: fixed;
       bottom: 28px;
@@ -93,7 +90,6 @@
     }
     .sticky-buy a:hover { transform: scale(1.05); box-shadow: 0 12px 48px rgba(139,92,246,0.7); }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -127,12 +123,10 @@
     }
     .nav-cta:hover { transform: scale(1.05); }
 
-    /* SECTIONS */
     section { position: relative; z-index: 1; }
     .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
     .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-    /* GRADIENT TEXT */
     .grad-text {
       background: var(--grad);
       -webkit-background-clip: text;
@@ -140,7 +134,6 @@
       background-clip: text;
     }
 
-    /* SECTION LABEL */
     .label {
       display: inline-flex;
       align-items: center;
@@ -157,7 +150,6 @@
       margin-bottom: 20px;
     }
 
-    /* HERO */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -210,7 +202,6 @@
     .glow-btn:hover { transform: translateY(-3px); box-shadow: 0 0 80px rgba(139,92,246,0.7), 0 12px 48px rgba(59,130,246,0.4); }
     .hero-note { margin-top: 16px; font-size: 0.82rem; color: #475569; }
 
-    /* COUNTDOWN */
     .countdown-wrap {
       margin-top: 48px;
       display: flex;
@@ -219,16 +210,8 @@
       gap: 12px;
     }
     .countdown-label { font-size: 0.8rem; color: var(--gray); font-weight: 600; letter-spacing: 0.05em; }
-    .countdown {
-      display: flex;
-      gap: 12px;
-    }
-    .cd-unit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
+    .countdown { display: flex; gap: 12px; }
+    .cd-unit { display: flex; flex-direction: column; align-items: center; gap: 4px; }
     .cd-num {
       background: rgba(255,255,255,0.06);
       border: 1px solid var(--border);
@@ -245,7 +228,6 @@
     .cd-sep { font-size: 1.8rem; font-weight: 900; color: var(--purple); align-self: center; margin-top: -8px; }
     .cd-label { font-size: 0.65rem; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; }
 
-    /* STATS */
     .stats {
       padding: 80px 24px;
       border-top: 1px solid var(--border);
@@ -258,15 +240,9 @@
       gap: 40px;
       text-align: center;
     }
-    .stat-num {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
+    .stat-num { font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 8px; }
     .stat-label { font-size: 0.9rem; color: var(--gray); }
 
-    /* PROOF BAR */
     .proof-bar {
       padding: 16px 24px;
       background: rgba(139,92,246,0.08);
@@ -280,14 +256,8 @@
     }
     .proof-bar span { color: var(--white); }
 
-    /* PROBLEM */
     .problem { padding: 100px 24px; }
-    .problem h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
+    .problem h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 20px; }
     .problem p { color: var(--gray); font-size: 1.05rem; margin-bottom: 16px; max-width: 700px; }
     .pain-list { list-style: none; margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
     .pain-item {
@@ -305,14 +275,8 @@
     .pain-icon { font-size: 1.4rem; flex-shrink: 0; }
     .pain-text { color: #94a3b8; font-size: 0.95rem; padding-top: 2px; }
 
-    /* STORY */
     .story { padding: 100px 24px; background: var(--bg2); }
-    .story h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
+    .story h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 20px; }
     .story-card {
       margin-top: 40px;
       padding: 48px;
@@ -323,59 +287,17 @@
       position: relative;
       overflow: hidden;
     }
-    .story-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--grad);
-    }
-    .story-card::after {
-      content: '"';
-      position: absolute;
-      top: -40px;
-      right: 40px;
-      font-size: 16rem;
-      color: rgba(139,92,246,0.06);
-      font-family: Georgia, serif;
-      line-height: 1;
-      pointer-events: none;
-    }
+    .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); }
+    .story-card::after { content: '"'; position: absolute; top: -40px; right: 40px; font-size: 16rem; color: rgba(139,92,246,0.06); font-family: Georgia, serif; line-height: 1; pointer-events: none; }
     .story-card p { color: #cbd5e1; font-size: 1.05rem; margin-bottom: 16px; }
-    .story-author {
-      margin-top: 28px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .author-avatar {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--grad);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 900;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
+    .story-author { margin-top: 28px; display: flex; align-items: center; gap: 14px; }
+    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem; flex-shrink: 0; }
     .author-name { font-weight: 700; font-size: 0.95rem; }
     .author-title { font-size: 0.8rem; color: var(--gray); }
 
-    /* TIMELINE */
     .timeline { padding: 100px 24px; }
-    .timeline h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-    .tl-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      margin-top: 48px;
-    }
+    .timeline h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .tl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 48px; }
     .tl-card {
       background: var(--glass);
       border: 1px solid var(--border);
@@ -387,54 +309,16 @@
       position: relative;
       overflow: hidden;
     }
-    .tl-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--grad);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
+    .tl-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); opacity: 0; transition: opacity 0.3s; }
     .tl-card:hover { border-color: rgba(139,92,246,0.4); transform: translateY(-4px); }
     .tl-card:hover::before { opacity: 1; }
-    .tl-month-badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--purple);
-      background: rgba(139,92,246,0.15);
-      padding: 4px 12px;
-      border-radius: 999px;
-      margin-bottom: 16px;
-    }
+    .tl-month-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--purple); background: rgba(139,92,246,0.15); padding: 4px 12px; border-radius: 999px; margin-bottom: 16px; }
     .tl-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
     .tl-card p { font-size: 0.85rem; color: var(--gray); margin: 0; }
-    .tl-connector {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--purple);
-      font-size: 1.5rem;
-      margin-top: 16px;
-    }
 
-    /* FEATURES GLASS */
     .features { padding: 100px 24px; background: var(--bg2); }
-    .features h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 48px;
-    }
+    .features h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 48px; }
     .feature-card {
       background: var(--glass);
       border: 1px solid var(--border);
@@ -445,78 +329,23 @@
       position: relative;
       overflow: hidden;
     }
-    .feature-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 0% 0%, rgba(139,92,246,0.08) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
+    .feature-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 0% 0%, rgba(139,92,246,0.08) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
     .feature-card:hover { border-color: rgba(139,92,246,0.4); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
     .feature-card:hover::after { opacity: 1; }
-    .feature-icon {
-      width: 52px; height: 52px;
-      border-radius: 14px;
-      background: rgba(139,92,246,0.15);
-      border: 1px solid rgba(139,92,246,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-    }
+    .feature-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
     .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
     .feature-card p { font-size: 0.88rem; color: var(--gray); margin: 0; line-height: 1.6; }
 
-    /* WHO IT'S FOR */
     .for-section { padding: 100px 24px; }
-    .for-section h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-    .for-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-top: 40px;
-    }
-    .for-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 20px;
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      transition: border-color 0.3s;
-    }
+    .for-section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+    .for-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 40px; }
+    .for-item { display: flex; align-items: flex-start; gap: 14px; padding: 20px; background: var(--glass); border: 1px solid var(--border); border-radius: 12px; backdrop-filter: blur(10px); transition: border-color 0.3s; }
     .for-item:hover { border-color: rgba(59,130,246,0.3); }
-    .for-check {
-      width: 22px; height: 22px;
-      border-radius: 50%;
-      background: var(--grad2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
+    .for-check { width: 22px; height: 22px; border-radius: 50%; background: var(--grad2); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; flex-shrink: 0; margin-top: 2px; }
     .for-text { font-size: 0.9rem; color: #cbd5e1; }
 
-    /* PRICING */
     .pricing { padding: 100px 24px; background: var(--bg2); }
-    .pricing h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-      text-align: center;
-    }
+    .pricing h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; text-align: center; }
     .price-box {
       max-width: 480px;
       margin: 48px auto 0;
@@ -529,101 +358,32 @@
       overflow: hidden;
       box-shadow: 0 0 80px rgba(139,92,246,0.15);
     }
-    .price-box::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: var(--grad);
-    }
-    .price-box::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 0%, rgba(139,92,246,0.1) 0%, transparent 60%);
-      pointer-events: none;
-    }
+    .price-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); }
+    .price-box::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(139,92,246,0.1) 0%, transparent 60%); pointer-events: none; }
     .price-tag-label { font-size: 0.8rem; color: var(--gray); margin-bottom: 8px; text-align: center; }
-    .price-amount {
-      font-size: 5rem;
-      font-weight: 900;
-      line-height: 1;
-      text-align: center;
-      letter-spacing: -0.03em;
-    }
+    .price-amount { font-size: 5rem; font-weight: 900; line-height: 1; text-align: center; letter-spacing: -0.03em; }
     .price-amount sup { font-size: 2rem; vertical-align: super; }
     .price-strike { text-align: center; text-decoration: line-through; color: #475569; font-size: 1rem; margin: 8px 0 28px; }
     .price-features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
-    .pf-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.9rem;
-      color: #cbd5e1;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
+    .pf-item { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; color: #cbd5e1; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
     .pf-item:last-child { border-bottom: none; padding-bottom: 0; }
     .pf-check { color: #22c55e; font-size: 1rem; flex-shrink: 0; }
     .price-note { text-align: center; font-size: 0.78rem; color: #475569; margin-top: 16px; }
 
-    /* FAQ */
     .faq { padding: 100px 24px; }
-    .faq h2 {
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
+    .faq h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
     .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
-    .faq-item {
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      overflow: hidden;
-      transition: border-color 0.3s;
-    }
+    .faq-item { background: var(--glass); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.3s; }
     .faq-item:hover { border-color: rgba(139,92,246,0.3); }
-    .faq-q {
-      padding: 22px 28px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
+    .faq-q { padding: 22px 28px; font-weight: 700; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
     .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--purple); flex-shrink: 0; }
     .faq-a { padding: 0 28px 22px; font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
 
-    /* FINAL CTA */
-    .final-cta {
-      padding: 120px 24px;
-      text-align: center;
-      background: var(--bg2);
-      position: relative;
-      overflow: hidden;
-    }
-    .final-cta::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 800px; height: 800px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .final-cta h2 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
-    }
+    .final-cta { padding: 120px 24px; text-align: center; background: var(--bg2); position: relative; overflow: hidden; }
+    .final-cta::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%); pointer-events: none; }
+    .final-cta h2 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 20px; }
     .final-cta p { color: var(--gray); font-size: 1.1rem; max-width: 560px; margin: 0 auto 48px; }
 
-    /* FOOTER */
     footer {
       padding: 32px 24px;
       border-top: 1px solid var(--border);
@@ -631,17 +391,48 @@
       font-size: 0.78rem;
       color: #334155;
     }
+    footer a { color: #475569; text-decoration: none; }
+    footer a:hover { color: var(--gray); }
 
-    /* ANIMATIONS */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+    /* PRIVACY MODAL */
+    .privacy-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      overflow-y: auto;
+      padding: 40px 24px;
     }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .privacy-modal.open { display: flex; align-items: flex-start; justify-content: center; }
+    .privacy-box {
+      background: #0d1220;
+      border: 1px solid rgba(139,92,246,0.3);
+      border-radius: 20px;
+      max-width: 720px;
+      width: 100%;
+      padding: 48px 40px;
+      position: relative;
     }
+    .privacy-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: none;
+      border: none;
+      color: var(--gray);
+      font-size: 1.5rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .privacy-close:hover { color: var(--white); }
+    .privacy-box h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 8px; }
+    .privacy-box .updated { font-size: 0.78rem; color: var(--gray); margin-bottom: 32px; }
+    .privacy-box h3 { font-size: 1rem; font-weight: 700; margin: 24px 0 8px; color: var(--purple); }
+    .privacy-box p { font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 8px; }
+
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
     .fade-up-delay-1 { transition-delay: 0.1s; }
     .fade-up-delay-2 { transition-delay: 0.2s; }
     .fade-up-delay-3 { transition-delay: 0.3s; }
@@ -655,28 +446,53 @@
       .sticky-buy { bottom: 16px; right: 16px; }
       .sticky-buy a { font-size: 0.82rem; padding: 12px 18px; }
       .cd-num { width: 52px; height: 52px; font-size: 1.4rem; }
+      .privacy-box { padding: 32px 24px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- BACKGROUND ORBS -->
+  <!-- PRIVACY MODAL -->
+  <div class="privacy-modal" id="privacyModal">
+    <div class="privacy-box">
+      <button class="privacy-close" onclick="document.getElementById('privacyModal').classList.remove('open')">✕</button>
+      <h2>Privacy Policy</h2>
+      <div class="updated">Last updated: March 30, 2026</div>
+
+      <h3>What information I collect</h3>
+      <p>When you purchase from missingdegree.com, your name and email address are collected via Stripe to deliver your product and enroll you in the 90-day email accountability sequence included with your purchase. Payment information is processed securely by Stripe — I never see or store your card number.</p>
+
+      <h3>How I use your information</h3>
+      <p>Your name and email are used to deliver your purchased files and send the accountability email sequence you opted into via purchase. I do not sell your information to any third party.</p>
+
+      <h3>Email marketing</h3>
+      <p>By purchasing, you are enrolled in the 90-day accountability email sequence described on this page. This sequence is part of the product. You may unsubscribe at any time via the link in any email. Unsubscribing stops the email sequence but does not affect your access to the guide.</p>
+
+      <h3>Third-party services</h3>
+      <p>This site uses Stripe (payment processing), MailerLite (email delivery), Zapier (automation), Vercel (hosting), and Google Drive (file delivery). Each handles your data according to their own privacy policies.</p>
+
+      <h3>No refunds</h3>
+      <p>Due to the instant digital delivery nature of this product, all sales are final. If you experience a technical issue accessing your files, email troy@missingdegree.com within 48 hours and I will resolve it.</p>
+
+      <h3>Contact</h3>
+      <p>Questions? Email troy@missingdegree.com</p>
+      <p style="margin-top:24px"><em>Troy Williams · missingdegree.com · Pittsburgh, Pennsylvania</em></p>
+    </div>
+  </div>
+
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
 
-  <!-- STICKY BUY BUTTON -->
   <div class="sticky-buy" id="stickyBtn">
     <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get Instant Access - $37 ↗</a>
   </div>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-brand">The Missing Piece</div>
     <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="nav-cta">Get Access - $37</a>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="label">📘 Launch Pricing - Limited Time</div>
     <h1>Get the Degree Your<br><span class="grad-text">Career Already Earned</span></h1>
@@ -684,7 +500,7 @@
     <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="glow-btn">
       ⚡ Get Instant Access - $37
     </a>
-    <p class="hero-note">One-time payment · Instant download · No subscription</p>
+    <p class="hero-note">One-time payment · Instant download · No subscription · All sales final</p>
 
     <div class="countdown-wrap">
       <div class="countdown-label">⏳ Launch pricing ends in</div>
@@ -707,25 +523,23 @@
     </div>
   </section>
 
-  <!-- PROOF BAR -->
   <div class="proof-bar">
-    <span>✅ Fully Accredited</span> &nbsp;·&nbsp; <span>✅ Works While Employed</span> &nbsp;·&nbsp; <span>✅ Based on Real Personal Experience</span>
+    <span>✅ Fully Accredited</span> &nbsp;·&nbsp; <span>✅ Works While Employed</span> &nbsp;·&nbsp; <span>✅ Based on Real Personal Experience</span> &nbsp;·&nbsp; <span>✅ Cost Varies — See FAQ</span>
   </div>
 
-  <!-- STATS -->
   <section class="stats">
     <div class="container-wide">
       <div class="stats-grid">
         <div class="fade-up">
-          <div class="stat-num grad-text" data-target="6" data-suffix=" months">0</div>
-          <div class="stat-label">Total time to graduation</div>
+          <div class="stat-num grad-text" data-target="4" data-suffix=" months">0</div>
+          <div class="stat-label">Troy's time to graduation</div>
         </div>
         <div class="fade-up fade-up-delay-1">
-          <div class="stat-num grad-text" data-target="5" data-prefix="<$" data-suffix="k">0</div>
-          <div class="stat-label">Total cost including tuition</div>
+          <div class="stat-num grad-text" data-target="500" data-prefix="<$" data-suffix="">0</div>
+          <div class="stat-label">Troy's out-of-pocket cost (with Pell Grant)</div>
         </div>
         <div class="fade-up fade-up-delay-2">
-          <div class="stat-num grad-text" data-target="60" data-suffix="+ credits">0</div>
+          <div class="stat-num grad-text" data-target="60" data-suffix=" credits">0</div>
           <div class="stat-label">Transferred before enrolling</div>
         </div>
         <div class="fade-up fade-up-delay-3">
@@ -736,38 +550,21 @@
     </div>
   </section>
 
-  <!-- PROBLEM -->
   <section class="problem">
     <div class="container">
       <div class="label fade-up">Sound Familiar?</div>
       <h2 class="fade-up">You've Earned It -<br><span class="grad-text">You Just Don't Have the Paper</span></h2>
       <p class="fade-up">You've been grinding in your field for years. You're competent. Dependable. You get results. But every time a promotion comes up, a better job opens, or a salary negotiation happens - the degree question comes up.</p>
       <ul class="pain-list">
-        <li class="pain-item fade-up">
-          <span class="pain-icon">😤</span>
-          <span class="pain-text">You've been passed over for promotions by people with less experience and a piece of paper</span>
-        </li>
-        <li class="pain-item fade-up fade-up-delay-1">
-          <span class="pain-icon">💸</span>
-          <span class="pain-text">You can't stomach the idea of $40k–$100k in student debt for a 4-year degree</span>
-        </li>
-        <li class="pain-item fade-up fade-up-delay-2">
-          <span class="pain-icon">⏳</span>
-          <span class="pain-text">You don't have 4 years - you have a job, bills, and a life to run</span>
-        </li>
-        <li class="pain-item fade-up fade-up-delay-3">
-          <span class="pain-icon">🤷</span>
-          <span class="pain-text">You've looked into online degrees but have no idea which ones are worth it or how to fast-track them</span>
-        </li>
-        <li class="pain-item fade-up fade-up-delay-4">
-          <span class="pain-icon">🚫</span>
-          <span class="pain-text">Traditional college feels like starting over - and it basically is</span>
-        </li>
+        <li class="pain-item fade-up"><span class="pain-icon">😤</span><span class="pain-text">You've been passed over for promotions by people with less experience and a piece of paper</span></li>
+        <li class="pain-item fade-up fade-up-delay-1"><span class="pain-icon">💸</span><span class="pain-text">You can't stomach the idea of $40k–$100k in student debt for a 4-year degree</span></li>
+        <li class="pain-item fade-up fade-up-delay-2"><span class="pain-icon">⏳</span><span class="pain-text">You don't have 4 years - you have a job, bills, and a life to run</span></li>
+        <li class="pain-item fade-up fade-up-delay-3"><span class="pain-icon">🤷</span><span class="pain-text">You've looked into online degrees but have no idea which ones are worth it or how to fast-track them</span></li>
+        <li class="pain-item fade-up fade-up-delay-4"><span class="pain-icon">🚫</span><span class="pain-text">Traditional college feels like starting over - and it basically is</span></li>
       </ul>
     </div>
   </section>
 
-  <!-- STORY -->
   <section class="story">
     <div class="container">
       <div class="label fade-up">The Author's Story</div>
@@ -787,7 +584,6 @@
     </div>
   </section>
 
-  <!-- TIMELINE -->
   <section class="timeline">
     <div class="container">
       <div class="label fade-up">The Fast-Track Timeline</div>
@@ -796,7 +592,7 @@
         <div class="tl-card fade-up">
           <div class="tl-month-badge">Months 1-2</div>
           <h3>Sophia Learning</h3>
-          <p>Complete transferable credits for $99/month, submit official transcript to WGU via Credly</p>
+          <p>Complete transferable credits for $99/month, submit official transcript to WGU via Credly (free)</p>
         </div>
         <div class="tl-card fade-up fade-up-delay-2">
           <div class="tl-month-badge">Month 3</div>
@@ -812,47 +608,21 @@
     </div>
   </section>
 
-  <!-- FEATURES -->
   <section class="features">
     <div class="container">
       <div class="label fade-up">What's Inside</div>
       <h2 class="fade-up">Everything You Need to <span class="grad-text">Execute the Plan</span></h2>
       <div class="features-grid">
-        <div class="feature-card fade-up">
-          <div class="feature-icon">🗺️</div>
-          <h3>The Complete Roadmap</h3>
-          <p>Step-by-step from day one to graduation - no guessing, no wasted credits, no confusion</p>
-        </div>
-        <div class="feature-card fade-up fade-up-delay-1">
-          <div class="feature-icon">📋</div>
-          <h3>Degree-Specific Playbooks</h3>
-          <p>Exact Sophia courses to take for Business, Healthcare, IT, and more - mapped to WGU transfer requirements</p>
-        </div>
-        <div class="feature-card fade-up fade-up-delay-2">
-          <div class="feature-icon">🤖</div>
-          <h3>The LLM Acceleration System</h3>
-          <p>How to use AI tools to cut study time dramatically - prep for milestones, ace assessments, polish written work</p>
-        </div>
-        <div class="feature-card fade-up fade-up-delay-3">
-          <div class="feature-icon">💰</div>
-          <h3>Financial Aid Blueprint</h3>
-          <p>How Pell Grants and federal loans work with WGU - for some students, WGU tuition is $0 out of pocket</p>
-        </div>
-        <div class="feature-card fade-up fade-up-delay-4">
-          <div class="feature-icon">⚡</div>
-          <h3>Speed Secrets from Reddit</h3>
-          <p>The real community tips: which courses to do first, promo codes, timing tricks, and transfer hacks</p>
-        </div>
-        <div class="feature-card fade-up fade-up-delay-5">
-          <div class="feature-icon">🔄</div>
-          <h3>2026 Policy Update</h3>
-          <p>WGU changed some transfer rules in 2026 - the guide covers exactly what still works and what to avoid</p>
-        </div>
+        <div class="feature-card fade-up"><div class="feature-icon">🗺️</div><h3>The Complete Roadmap</h3><p>Step-by-step from day one to graduation - no guessing, no wasted credits, no confusion</p></div>
+        <div class="feature-card fade-up fade-up-delay-1"><div class="feature-icon">📋</div><h3>Degree-Specific Playbooks</h3><p>Courses to take for all 21 WGU Business and Technology degrees - mapped to transfer requirements</p></div>
+        <div class="feature-card fade-up fade-up-delay-2"><div class="feature-icon">🤖</div><h3>The LLM Acceleration System</h3><p>How to use AI tools to cut study time dramatically - prep for milestones, ace assessments, polish written work</p></div>
+        <div class="feature-card fade-up fade-up-delay-3"><div class="feature-icon">💰</div><h3>Financial Aid Blueprint</h3><p>How Pell Grants and federal loans work with WGU - for some students, WGU tuition is $0 out of pocket</p></div>
+        <div class="feature-card fade-up fade-up-delay-4"><div class="feature-icon">📊</div><h3>Progress Tracker Spreadsheet</h3><p>Google Sheets tracker with Sophia course tracker, WGU course tracker, financial aid calculator, and troubleshooting guide</p></div>
+        <div class="feature-card fade-up fade-up-delay-5"><div class="feature-icon">🔄</div><h3>2026 Policy Update</h3><p>WGU changed some transfer rules in 2026 - the guide covers exactly what still works and what to avoid</p></div>
       </div>
     </div>
   </section>
 
-  <!-- WHO IT'S FOR -->
   <section class="for-section">
     <div class="container">
       <div class="label fade-up">Is This For You?</div>
@@ -861,39 +631,39 @@
         <div class="for-item fade-up"><div class="for-check">✓</div><div class="for-text">You have real work experience but no bachelor's degree</div></div>
         <div class="for-item fade-up fade-up-delay-1"><div class="for-check">✓</div><div class="for-text">You can't afford or don't want to spend 4 years in traditional college</div></div>
         <div class="for-item fade-up fade-up-delay-2"><div class="for-check">✓</div><div class="for-text">You need a degree that's fully accredited and recognized by employers</div></div>
-        <div class="for-item fade-up fade-up-delay-3"><div class="for-check">✓</div><div class="for-text">You're self-motivated and don't need someone to hold your hand</div></div>
+        <div class="for-item fade-up fade-up-delay-3"><div class="for-check">✓</div><div class="for-text">You're self-motivated and can work independently</div></div>
         <div class="for-item fade-up fade-up-delay-4"><div class="for-check">✓</div><div class="for-text">You're targeting fields like Business, Healthcare, IT, or Management</div></div>
         <div class="for-item fade-up fade-up-delay-5"><div class="for-check">✓</div><div class="for-text">You want a clear, proven plan - not vague advice</div></div>
       </div>
     </div>
   </section>
 
-  <!-- PRICING -->
   <section class="pricing">
     <div class="container">
       <div class="label fade-up" style="margin: 0 auto 20px; display:table">Simple Pricing</div>
       <h2 class="fade-up" style="text-align:center">One Price. <span class="grad-text">Lifetime Access.</span></h2>
       <div class="price-box fade-up">
-        <div class="price-tag-label">The Missing Piece Guide</div>
+        <div class="price-tag-label">The Missing Piece Guide + Tracker</div>
         <div class="price-amount grad-text"><sup>$</sup>37</div>
         <div class="price-strike">Regular price $97</div>
         <ul class="price-features">
           <li class="pf-item"><span class="pf-check">✓</span> Complete WGU + Sophia fast-track system</li>
-          <li class="pf-item"><span class="pf-check">✓</span> Degree-specific course playbooks</li>
+          <li class="pf-item"><span class="pf-check">✓</span> All 21 degree playbooks (Business + Technology)</li>
           <li class="pf-item"><span class="pf-check">✓</span> LLM acceleration strategies</li>
           <li class="pf-item"><span class="pf-check">✓</span> Financial aid & Pell Grant guide</li>
+          <li class="pf-item"><span class="pf-check">✓</span> Progress tracker spreadsheet</li>
+          <li class="pf-item"><span class="pf-check">✓</span> 90-day accountability email sequence</li>
           <li class="pf-item"><span class="pf-check">✓</span> 2026 policy update included</li>
-          <li class="pf-item"><span class="pf-check">✓</span> Instant download, keep forever</li>
+          <li class="pf-item"><span class="pf-check">✓</span> Instant access, keep forever</li>
         </ul>
         <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="glow-btn" style="width:100%; justify-content:center">
           ⚡ Get Instant Access - $37
         </a>
-        <p class="price-note">🔒 Secure checkout via Stripe · One-time payment · No recurring charges</p>
+        <p class="price-note">🔒 Secure checkout via Stripe · One-time payment · No recurring charges · All sales final</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="faq">
     <div class="container">
       <div class="label fade-up">FAQ</div>
@@ -905,24 +675,27 @@
         </div>
         <div class="faq-item">
           <div class="faq-q">Can I really finish in 4 months?</div>
-          <div class="faq-a">Troy did it. Others in the WGU community have done it in similar or shorter timeframes. It depends on how aggressively you work through Sophia and how quickly you demonstrate competency at WGU. The guide gives you the system - your pace determines your timeline.</div>
+          <div class="faq-a">Troy did it. Others in the WGU community have done it in similar or shorter timeframes. It depends on how aggressively you work through Sophia and how quickly you demonstrate competency at WGU. The guide gives you the system - your pace determines your timeline. Results vary.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">What does it actually cost?</div>
-          <div class="faq-a">Sophia Learning is $99/month. One WGU semester runs roughly $3,755–$4,500 depending on your program. Pell Grant recipients may have WGU costs covered entirely. Total realistic out-of-pocket: $200–$5,000.</div>
+          <div class="faq-a">Sophia Learning is $99/month. One WGU semester runs roughly $3,755–$4,500 depending on your program. Pell Grant recipients may have WGU costs covered entirely. Total realistic out-of-pocket: $200–$5,000 depending on your financial aid eligibility.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How did Troy get his degree for under $500?</div>
+          <div class="faq-a">Troy's out-of-pocket cost was under $500 because he qualified for the Pell Grant, which covered most of his WGU tuition. Without financial aid, expect $4,000-$5,000 total. The guide includes a full section on maximizing financial aid - for eligible students, WGU can cost almost nothing.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">Do I need to quit my job?</div>
           <div class="faq-a">No. Both Sophia and WGU are fully online and self-paced. Troy completed this while working full time. Evenings and weekends are enough.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">How did Troy get his degree for under $500?</div>
-          <div class="faq-a">Troy's out-of-pocket cost was under $500 because he qualified for the Pell Grant, which covered most of his WGU tuition. Without financial aid, expect $4,000-$5,000 total. The guide includes a full section on maximizing financial aid - for eligible students, WGU can cost almost nothing.</div>
-        </div>
+          <div class="faq-q">What degrees can I get this way?</div>
+          <div class="faq-a">The guide covers all 9 WGU Business degrees and all 12 WGU Technology degrees — 21 programs total, each with a dedicated section showing what Sophia covers and what stays at WGU.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-q">What degrees can I get this way?</div>
-          <div class="faq-a">The guide covers Business Administration, Healthcare/Health & Human Services, IT, Cybersecurity, and more. Business degrees have the most transfer-friendly pathway with no 2026 restrictions.</div>
+          <div class="faq-q">What is your refund policy?</div>
+          <div class="faq-a">All sales are final due to the instant digital delivery of this product. If you experience a technical issue accessing your files, email troy@missingdegree.com within 48 hours and I will resolve it promptly.</div>
         </div>
         <div class="faq-item">
           <div class="faq-q">What if I've never heard of WGU or Sophia?</div>
@@ -932,7 +705,6 @@
     </div>
   </section>
 
-  <!-- FINAL CTA -->
   <section class="final-cta">
     <div class="container">
       <h2 class="fade-up">Stop Waiting.<br><span class="grad-text">Start Finishing.</span></h2>
@@ -940,30 +712,36 @@
       <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="glow-btn fade-up">
         ⚡ Get Instant Access - $37
       </a>
-      <p style="margin-top:20px; font-size:0.8rem; color:#334155;" class="fade-up">One-time payment · Instant access · Secure checkout via Stripe</p>
+      <p style="margin-top:20px; font-size:0.8rem; color:#334155;" class="fade-up">One-time payment · Instant access · Secure checkout via Stripe · All sales final</p>
     </div>
   </section>
 
   <footer>
     <p>© 2026 Troy Williams · <em>The Missing Piece</em> · All rights reserved</p>
     <p style="margin-top:6px">Results vary. WGU and Sophia transfer policies are subject to change. Always verify current articulations at partners.wgu.edu.</p>
+    <p style="margin-top:8px">
+      <a href="#" onclick="document.getElementById('privacyModal').classList.add('open'); return false;">Privacy Policy & No-Refund Policy</a>
+    </p>
   </footer>
 
   <script>
-    // STICKY BUTTON
     const stickyBtn = document.getElementById('stickyBtn');
     window.addEventListener('scroll', () => {
       stickyBtn.classList.toggle('visible', window.scrollY > 600);
     });
 
-    // SCROLL ANIMATIONS
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // COUNTDOWN - 47 hours 59 min from page load
-    const end = Date.now() + (47 * 3600 + 59 * 60) * 1000;
+    // COUNTDOWN - resets every 48 hours per session
+    const cdKey = 'cd_end';
+    let end = parseInt(localStorage.getItem(cdKey) || '0');
+    if (!end || end < Date.now()) {
+      end = Date.now() + (47 * 3600 + 59 * 60) * 1000;
+      localStorage.setItem(cdKey, end);
+    }
     function tick() {
       const diff = Math.max(0, end - Date.now());
       const h = Math.floor(diff / 3600000);
@@ -995,6 +773,11 @@
       });
     }, { threshold: 0.5 });
     document.querySelectorAll('[data-target]').forEach(el => numObserver.observe(el));
+
+    // Close privacy modal on backdrop click
+    document.getElementById('privacyModal').addEventListener('click', function(e) {
+      if (e.target === this) this.classList.remove('open');
+    });
   </script>
 </body>
 </html>
