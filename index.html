@@ -202,32 +202,6 @@
     .glow-btn:hover { transform: translateY(-3px); box-shadow: 0 0 80px rgba(139,92,246,0.7), 0 12px 48px rgba(59,130,246,0.4); }
     .hero-note { margin-top: 16px; font-size: 0.82rem; color: #475569; }
 
-    .countdown-wrap {
-      margin-top: 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-    }
-    .countdown-label { font-size: 0.8rem; color: var(--gray); font-weight: 600; letter-spacing: 0.05em; }
-    .countdown { display: flex; gap: 12px; }
-    .cd-unit { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-    .cd-num {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-size: 1.8rem;
-      font-weight: 900;
-      width: 64px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-variant-numeric: tabular-nums;
-    }
-    .cd-sep { font-size: 1.8rem; font-weight: 900; color: var(--purple); align-self: center; margin-top: -8px; }
-    .cd-label { font-size: 0.65rem; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; }
-
     .stats {
       padding: 80px 24px;
       border-top: 1px solid var(--border);
@@ -445,7 +419,6 @@
       .price-box { padding: 32px 24px; }
       .sticky-buy { bottom: 16px; right: 16px; }
       .sticky-buy a { font-size: 0.82rem; padding: 12px 18px; }
-      .cd-num { width: 52px; height: 52px; font-size: 1.4rem; }
       .privacy-box { padding: 32px 24px; }
     }
   </style>
@@ -472,7 +445,7 @@
       <p>This site uses Stripe (payment processing), MailerLite (email delivery), Zapier (automation), Vercel (hosting), and Google Drive (file delivery). Each handles your data according to their own privacy policies.</p>
 
       <h3>No refunds</h3>
-      <p>Due to the instant digital delivery nature of this product, all sales are final. If you experience a technical issue accessing your files, email troy@missingdegree.com within 48 hours and I will resolve it.</p>
+      <p>Because the guide delivers immediately and in full, all sales are final. If anything goes wrong technically, I fix it fast. email troy@missingdegree.com and I will resolve it.</p>
 
       <h3>Contact</h3>
       <p>Questions? Email troy@missingdegree.com</p>
@@ -494,33 +467,12 @@
   </nav>
 
   <section class="hero">
-    <div class="label">📘 Launch Pricing - Limited Time</div>
     <h1>Get the Degree Your<br><span class="grad-text">Career Already Earned</span></h1>
     <p class="hero-sub">The exact system Troy Williams used to earn a <strong>fully accredited Bachelor's degree</strong> in <strong>4 months</strong>, for under <strong>$500</strong> - without quitting his job.</p>
     <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="glow-btn">
       ⚡ Get Instant Access - $37
     </a>
     <p class="hero-note">One-time payment · Instant download · No subscription · All sales final</p>
-
-    <div class="countdown-wrap">
-      <div class="countdown-label">⏳ Launch pricing ends in</div>
-      <div class="countdown">
-        <div class="cd-unit">
-          <div class="cd-num" id="cd-h">00</div>
-          <div class="cd-label">Hours</div>
-        </div>
-        <div class="cd-sep">:</div>
-        <div class="cd-unit">
-          <div class="cd-num" id="cd-m">00</div>
-          <div class="cd-label">Mins</div>
-        </div>
-        <div class="cd-sep">:</div>
-        <div class="cd-unit">
-          <div class="cd-num" id="cd-s">00</div>
-          <div class="cd-label">Secs</div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <div class="proof-bar">
@@ -734,25 +686,6 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // COUNTDOWN - resets every 48 hours per session
-    const cdKey = 'cd_end';
-    let end = parseInt(localStorage.getItem(cdKey) || '0');
-    if (!end || end < Date.now()) {
-      end = Date.now() + (47 * 3600 + 59 * 60) * 1000;
-      localStorage.setItem(cdKey, end);
-    }
-    function tick() {
-      const diff = Math.max(0, end - Date.now());
-      const h = Math.floor(diff / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      document.getElementById('cd-h').textContent = String(h).padStart(2, '0');
-      document.getElementById('cd-m').textContent = String(m).padStart(2, '0');
-      document.getElementById('cd-s').textContent = String(s).padStart(2, '0');
-    }
-    tick();
-    setInterval(tick, 1000);
 
     // ANIMATED NUMBERS
     const numObserver = new IntersectionObserver((entries) => {
