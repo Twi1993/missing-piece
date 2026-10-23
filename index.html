@@ -1,716 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Missing Piece - Get the Degree Your Career Already Earned</title>
-  <meta name="description" content="The exact WGU + Sophia system to earn a fully accredited bachelor's degree in under 6 months, while working full time." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #080c14;
-      --bg2: #0d1220;
-      --bg3: #111827;
-      --purple: #8b5cf6;
-      --blue: #3b82f6;
-      --cyan: #06b6d4;
-      --grad: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #06b6d4 100%);
-      --grad2: linear-gradient(135deg, #6d28d9 0%, #2563eb 100%);
-      --white: #ffffff;
-      --gray: #94a3b8;
-      --border: rgba(255,255,255,0.08);
-      --glass: rgba(255,255,255,0.04);
-      --glow: 0 0 40px rgba(139,92,246,0.3);
-      --glow2: 0 0 80px rgba(59,130,246,0.2);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(100px);
-      opacity: 0.15;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .orb-1 { width: 600px; height: 600px; background: var(--purple); top: -200px; left: -200px; }
-    .orb-2 { width: 500px; height: 500px; background: var(--blue); bottom: -100px; right: -100px; }
-    .orb-3 { width: 400px; height: 400px; background: var(--cyan); top: 50%; left: 50%; transform: translate(-50%,-50%); }
-
-    .sticky-buy {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 1000;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.4s, transform 0.4s;
-      pointer-events: none;
-    }
-    .sticky-buy.visible {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-    .sticky-buy a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--grad);
-      color: #fff;
-      font-weight: 800;
-      font-size: 0.9rem;
-      padding: 14px 24px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 8px 32px rgba(139,92,246,0.5), 0 0 0 1px rgba(255,255,255,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .sticky-buy a:hover { transform: scale(1.05); box-shadow: 0 12px 48px rgba(139,92,246,0.7); }
-
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 16px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(8,12,20,0.8);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-brand {
-      font-weight: 800;
-      font-size: 1rem;
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .nav-cta {
-      background: var(--grad);
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 10px 22px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(139,92,246,0.4);
-      transition: transform 0.2s;
-    }
-    .nav-cta:hover { transform: scale(1.05); }
-
-    section { position: relative; z-index: 1; }
-    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
-    .container-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-    .grad-text {
-      background: var(--grad);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--purple);
-      background: rgba(139,92,246,0.1);
-      border: 1px solid rgba(139,92,246,0.3);
-      padding: 6px 14px;
-      border-radius: 999px;
-      margin-bottom: 20px;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 120px 24px 80px;
-    }
-    .hero h1 {
-      font-size: clamp(2.4rem, 6vw, 4.5rem);
-      font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      max-width: 860px;
-      margin-bottom: 24px;
-    }
-    .hero-sub {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--gray);
-      max-width: 600px;
-      margin: 0 auto 48px;
-    }
-    .hero-sub strong { color: var(--white); }
-    .glow-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      background: var(--grad);
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.1rem;
-      padding: 20px 48px;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 0 60px rgba(139,92,246,0.5), 0 8px 32px rgba(59,130,246,0.3);
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative;
-    }
-    .glow-btn::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 52px;
-      background: var(--grad);
-      z-index: -1;
-      filter: blur(16px);
-      opacity: 0.6;
-    }
-    .glow-btn:hover { transform: translateY(-3px); box-shadow: 0 0 80px rgba(139,92,246,0.7), 0 12px 48px rgba(59,130,246,0.4); }
-    .hero-note { margin-top: 16px; font-size: 0.82rem; color: #475569; }
-
-    .stats {
-      padding: 80px 24px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--bg2);
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 40px;
-      text-align: center;
-    }
-    .stat-num { font-size: 3rem; font-weight: 900; line-height: 1; margin-bottom: 8px; }
-    .stat-label { font-size: 0.9rem; color: var(--gray); }
-
-    .proof-bar {
-      padding: 16px 24px;
-      background: rgba(139,92,246,0.08);
-      border-top: 1px solid rgba(139,92,246,0.2);
-      border-bottom: 1px solid rgba(139,92,246,0.2);
-      text-align: center;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gray);
-      letter-spacing: 0.03em;
-    }
-    .proof-bar span { color: var(--white); }
-
-    .problem { padding: 100px 24px; }
-    .problem h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 20px; }
-    .problem p { color: var(--gray); font-size: 1.05rem; margin-bottom: 16px; max-width: 700px; }
-    .pain-list { list-style: none; margin-top: 40px; display: flex; flex-direction: column; gap: 16px; }
-    .pain-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 20px 24px;
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      transition: border-color 0.3s, background 0.3s;
-    }
-    .pain-item:hover { border-color: rgba(139,92,246,0.3); background: rgba(139,92,246,0.05); }
-    .pain-icon { font-size: 1.4rem; flex-shrink: 0; }
-    .pain-text { color: #94a3b8; font-size: 0.95rem; padding-top: 2px; }
-
-    .story { padding: 100px 24px; background: var(--bg2); }
-    .story h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 20px; }
-    .story-card {
-      margin-top: 40px;
-      padding: 48px;
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      backdrop-filter: blur(20px);
-      position: relative;
-      overflow: hidden;
-    }
-    .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); }
-    .story-card::after { content: '"'; position: absolute; top: -40px; right: 40px; font-size: 16rem; color: rgba(139,92,246,0.06); font-family: Georgia, serif; line-height: 1; pointer-events: none; }
-    .story-card p { color: #cbd5e1; font-size: 1.05rem; margin-bottom: 16px; }
-    .story-author { margin-top: 28px; display: flex; align-items: center; gap: 14px; }
-    .author-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem; flex-shrink: 0; }
-    .author-name { font-weight: 700; font-size: 0.95rem; }
-    .author-title { font-size: 0.8rem; color: var(--gray); }
-
-    .timeline { padding: 100px 24px; }
-    .timeline h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
-    .tl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 48px; }
-    .tl-card {
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px 24px;
-      text-align: center;
-      backdrop-filter: blur(20px);
-      transition: border-color 0.3s, transform 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .tl-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); opacity: 0; transition: opacity 0.3s; }
-    .tl-card:hover { border-color: rgba(139,92,246,0.4); transform: translateY(-4px); }
-    .tl-card:hover::before { opacity: 1; }
-    .tl-month-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--purple); background: rgba(139,92,246,0.15); padding: 4px 12px; border-radius: 999px; margin-bottom: 16px; }
-    .tl-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
-    .tl-card p { font-size: 0.85rem; color: var(--gray); margin: 0; }
-
-    .features { padding: 100px 24px; background: var(--bg2); }
-    .features h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
-    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 48px; }
-    .feature-card {
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
-      backdrop-filter: blur(20px);
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .feature-card::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 0% 0%, rgba(139,92,246,0.08) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
-    .feature-card:hover { border-color: rgba(139,92,246,0.4); transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-    .feature-card:hover::after { opacity: 1; }
-    .feature-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.25); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
-    .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 10px; }
-    .feature-card p { font-size: 0.88rem; color: var(--gray); margin: 0; line-height: 1.6; }
-
-    .for-section { padding: 100px 24px; }
-    .for-section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
-    .for-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 40px; }
-    .for-item { display: flex; align-items: flex-start; gap: 14px; padding: 20px; background: var(--glass); border: 1px solid var(--border); border-radius: 12px; backdrop-filter: blur(10px); transition: border-color 0.3s; }
-    .for-item:hover { border-color: rgba(59,130,246,0.3); }
-    .for-check { width: 22px; height: 22px; border-radius: 50%; background: var(--grad2); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; flex-shrink: 0; margin-top: 2px; }
-    .for-text { font-size: 0.9rem; color: #cbd5e1; }
-
-    .pricing { padding: 100px 24px; background: var(--bg2); }
-    .pricing h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; text-align: center; }
-    .price-box {
-      max-width: 480px;
-      margin: 48px auto 0;
-      background: var(--glass);
-      border: 1px solid rgba(139,92,246,0.3);
-      border-radius: 24px;
-      padding: 48px 40px;
-      backdrop-filter: blur(30px);
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 80px rgba(139,92,246,0.15);
-    }
-    .price-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); }
-    .price-box::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(139,92,246,0.1) 0%, transparent 60%); pointer-events: none; }
-    .price-tag-label { font-size: 0.8rem; color: var(--gray); margin-bottom: 8px; text-align: center; }
-    .price-amount { font-size: 5rem; font-weight: 900; line-height: 1; text-align: center; letter-spacing: -0.03em; }
-    .price-amount sup { font-size: 2rem; vertical-align: super; }
-    .price-strike { text-align: center; text-decoration: line-through; color: #475569; font-size: 1rem; margin: 8px 0 28px; }
-    .price-features { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
-    .pf-item { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; color: #cbd5e1; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-    .pf-item:last-child { border-bottom: none; padding-bottom: 0; }
-    .pf-check { color: #22c55e; font-size: 1rem; flex-shrink: 0; }
-    .price-note { text-align: center; font-size: 0.78rem; color: #475569; margin-top: 16px; }
-
-    .faq { padding: 100px 24px; }
-    .faq h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
-    .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
-    .faq-item { background: var(--glass); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.3s; }
-    .faq-item:hover { border-color: rgba(139,92,246,0.3); }
-    .faq-q { padding: 22px 28px; font-weight: 700; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--purple); flex-shrink: 0; }
-    .faq-a { padding: 0 28px 22px; font-size: 0.9rem; color: var(--gray); line-height: 1.7; }
-
-    .final-cta { padding: 120px 24px; text-align: center; background: var(--bg2); position: relative; overflow: hidden; }
-    .final-cta::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, transparent 70%); pointer-events: none; }
-    .final-cta h2 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 20px; }
-    .final-cta p { color: var(--gray); font-size: 1.1rem; max-width: 560px; margin: 0 auto 48px; }
-
-    footer {
-      padding: 32px 24px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      font-size: 0.78rem;
-      color: #334155;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: var(--gray); }
-
-    /* PRIVACY MODAL */
-    .privacy-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(8px);
-      overflow-y: auto;
-      padding: 40px 24px;
-    }
-    .privacy-modal.open { display: flex; align-items: flex-start; justify-content: center; }
-    .privacy-box {
-      background: #0d1220;
-      border: 1px solid rgba(139,92,246,0.3);
-      border-radius: 20px;
-      max-width: 720px;
-      width: 100%;
-      padding: 48px 40px;
-      position: relative;
-    }
-    .privacy-close {
-      position: absolute;
-      top: 20px; right: 24px;
-      background: none;
-      border: none;
-      color: var(--gray);
-      font-size: 1.5rem;
-      cursor: pointer;
-      line-height: 1;
-    }
-    .privacy-close:hover { color: var(--white); }
-    .privacy-box h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 8px; }
-    .privacy-box .updated { font-size: 0.78rem; color: var(--gray); margin-bottom: 32px; }
-    .privacy-box h3 { font-size: 1rem; font-weight: 700; margin: 24px 0 8px; color: var(--purple); }
-    .privacy-box p { font-size: 0.88rem; color: #94a3b8; line-height: 1.7; margin-bottom: 8px; }
-
-    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    .fade-up-delay-1 { transition-delay: 0.1s; }
-    .fade-up-delay-2 { transition-delay: 0.2s; }
-    .fade-up-delay-3 { transition-delay: 0.3s; }
-    .fade-up-delay-4 { transition-delay: 0.4s; }
-    .fade-up-delay-5 { transition-delay: 0.5s; }
-
-    @media (max-width: 640px) {
-      nav { padding: 14px 20px; }
-      .story-card { padding: 28px 22px; }
-      .price-box { padding: 32px 24px; }
-      .sticky-buy { bottom: 16px; right: 16px; }
-      .sticky-buy a { font-size: 0.82rem; padding: 12px 18px; }
-      .privacy-box { padding: 32px 24px; }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missing Degree | Finish your bachelor's faster with Sophia and WGU</title>
+<meta name="description" content="A plain-English roadmap for working adults: Sophia Learning for transfer credits, WGU's self-paced model to finish, and AI tools to study smarter.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f4ec;--paper:#fffdf8;--ink:#1d1c1a;--muted:#5b5750;--line:#e3dccd;--accent:#1f4d3a;--accent-ink:#fff;--accent-soft:#e4ede6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:650;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #c98a1b;outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.narrow{max-width:700px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:10}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
+.brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:1.25rem;text-decoration:none;color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:14px 26px;border-radius:6px;min-height:48px}
+.btn:hover{background:#163a2b}
+.btn.small{padding:9px 16px;min-height:auto;font-size:.95rem}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+.hero{padding:72px 0 56px}
+.hero .lede{font-size:1.2rem;color:var(--muted);max-width:640px}
+.fine{font-size:.92rem;color:var(--muted);margin-top:12px}
+.hero-img{margin-top:40px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.hero-img img{display:block;width:100%;height:auto}
+figcaption{font-size:.9rem;color:var(--muted);padding:10px 14px;background:var(--paper)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px}
+ul.check,ul.cross{list-style:none;padding:0;margin:0}
+ul.check li,ul.cross li{padding:6px 0 6px 28px;position:relative}
+ul.check li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+ul.cross li::before{content:"×";position:absolute;left:2px;color:#9a3b2a;font-weight:700}
+.timeline{border-left:3px solid var(--accent);margin:28px 0;padding-left:22px}
+.timeline div{margin-bottom:12px}
+.timeline b{display:inline-block;min-width:120px}
+blockquote{margin:32px 0;padding:22px 26px;background:var(--accent-soft);border-radius:8px;font-family:Fraunces,Georgia,serif;font-size:1.25rem;line-height:1.4}
+blockquote p:last-child{margin:0}
+.proof figure{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.proof img{display:block;width:100%;height:auto}
+.inside{display:grid;gap:0}
+.inside div{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+@media (max-width:640px){.inside div{grid-template-columns:1fr;gap:4px}}
+.price-card{background:var(--paper);border:2px solid var(--accent);border-radius:10px;padding:30px;max-width:520px}
+.price{font-family:Fraunces,Georgia,serif;font-size:3rem;font-weight:650;margin:0}
+.soon{color:var(--muted);margin-top:22px}
+table{width:100%;border-collapse:collapse;background:var(--paper);font-size:1rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-weight:600}
+.tablewrap{overflow-x:auto}
+.note{background:var(--paper);border-left:4px solid #c98a1b;padding:14px 18px;margin-top:20px;font-size:.98rem}
+details{border-top:1px solid var(--line);padding:16px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;font-size:1.08rem}
+details p{margin-top:10px}
+footer{padding:44px 0;font-size:.95rem;color:var(--muted)}
+footer a{color:var(--muted)}
+dialog{max-width:680px;width:92vw;border:1px solid var(--line);border-radius:10px;padding:28px;background:var(--paper);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+dialog h3{margin-top:1.2em}
+.close{float:right;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit}
+</style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/">Missing Degree</a>
+  <a class="btn small" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
+</div></header>
 
-  <!-- PRIVACY MODAL -->
-  <div class="privacy-modal" id="privacyModal">
-    <div class="privacy-box">
-      <button class="privacy-close" onclick="document.getElementById('privacyModal').classList.remove('open')">✕</button>
-      <h2>Privacy Policy</h2>
-      <div class="updated">Last updated: March 30, 2026</div>
+<main id="main">
+<section class="hero"><div class="wrap">
+  <h1>Yes, it's a shortcut. You still have to do the work.</h1>
+  <p class="lede">A plain-English roadmap for working adults: Sophia Learning for transfer credits, WGU's self-paced model to finish, and AI tools to study smarter. I did it while working full-time, for about $500 out of pocket.</p>
+  <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
+  <p class="fine">Instant download. 14-day refund if you've started. Not affiliated with WGU or Sophia.</p>
+  <figure class="hero-img">
+    <img src="/images/grad.jpg" width="1260" height="381" alt="WGU graduation screen reading Congratulations Troy Williams, graduating with Bachelor of Science, Healthcare Administration">
+    <figcaption>My WGU graduation screen, October 2025.</figcaption>
+  </figure>
+</div></section>
 
-      <h3>What information I collect</h3>
-      <p>When you purchase from missingdegree.com, your name and email address are collected via Stripe to deliver your product and enroll you in the 90-day email accountability sequence included with your purchase. Payment information is processed securely by Stripe — I never see or store your card number.</p>
-
-      <h3>How I use your information</h3>
-      <p>Your name and email are used to deliver your purchased files and send the accountability email sequence you opted into via purchase. I do not sell your information to any third party.</p>
-
-      <h3>Email marketing</h3>
-      <p>By purchasing, you are enrolled in the 90-day accountability email sequence described on this page. This sequence is part of the product. You may unsubscribe at any time via the link in any email. Unsubscribing stops the email sequence but does not affect your access to the guide.</p>
-
-      <h3>Third-party services</h3>
-      <p>This site uses Stripe (payment processing), MailerLite (email delivery), Zapier (automation), Vercel (hosting), and Google Drive (file delivery). Each handles your data according to their own privacy policies.</p>
-
-      <h3>No refunds</h3>
-      <p>Because the guide delivers immediately and in full, all sales are final. If anything goes wrong technically, I fix it fast. email troy@missingdegree.com and I will resolve it.</p>
-
-      <h3>Contact</h3>
-      <p>Questions? Email troy@missingdegree.com</p>
-      <p style="margin-top:24px"><em>Troy Williams · missingdegree.com · Pittsburgh, Pennsylvania</em></p>
-    </div>
+<section id="fit"><div class="wrap">
+  <h2>Is this for you?</h2>
+  <div class="two">
+    <div class="panel"><h3>This is for you if</h3><ul class="check">
+      <li>You have work experience but no bachelor's degree.</li>
+      <li>You keep hitting "degree required" on job posts or promotions.</li>
+      <li>You can give it steady hours every week, even around a full-time job.</li>
+      <li>You want the fastest honest route to an accredited degree.</li>
+      <li>You'd rather follow one clear plan than piece it together from forums.</li>
+    </ul></div>
+    <div class="panel"><h3>This is not for you if</h3><ul class="cross">
+      <li>You want someone to take your exams or write your papers.</li>
+      <li>You need a guaranteed finish date. Your pace sets the timeline.</li>
+      <li>Your field needs a license or degree WGU doesn't offer.</li>
+      <li>You can't put in consistent weekly hours right now.</li>
+    </ul></div>
   </div>
+</div></section>
 
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
-  <div class="sticky-buy" id="stickyBtn">
-    <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get Instant Access - $37 ↗</a>
+<section id="story"><div class="wrap narrow">
+  <h2>How I did it</h2>
+  <p>I spent time in healthcare, but most of my career has been in sales. That turned out to be my advantage. My degree was a business degree, and a lot of what WGU tested me on, I had already learned on the job: negotiating, managing accounts, reading people, hitting numbers.</p>
+  <p>In April 2025 I started on Sophia Learning to knock out transfer credits. Two weeks in, my car broke down. It took two weeks to get it fixed, and it killed my motivation. I stopped. That was the real test, not any exam.</p>
+  <p>I got past that mental block by keeping one thought in front of me: once this degree is done, it's done. Nobody can take it back, and I never have to do it again. So I went back to work.</p>
+  <div class="timeline" aria-label="Timeline">
+    <div><b>April 2025</b> Started Sophia Learning</div>
+    <div><b>Spring 2025</b> Finished 19 Sophia courses</div>
+    <div><b>July 2025</b> Enrolled at WGU</div>
+    <div><b>Aug 1, 2025</b> Started WGU classes</div>
+    <div><b>Oct 1, 2025</b> Completed my BS in Healthcare Administration</div>
   </div>
+  <p>Four months of hard work, then finished. At least until my master's.</p>
+  <p>Along the way, my WGU courses got me hooked on supply chain. Today I work as a logistics professional, and I wrote this guide so you can skip the months of digging I did and spend that energy on the work itself.</p>
+  <blockquote><p>Keep your mental game up. Something will knock you off track: a car, a kid, a bad week at work. Plan for it. The people who finish aren't the ones who never stop. They're the ones who start again.</p></blockquote>
+  <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
+</div></section>
 
-  <nav>
-    <div class="nav-brand">The Missing Piece</div>
-    <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="nav-cta">Get Access - $37</a>
-  </nav>
-
-  <section class="hero">
-    <h1>Get the Degree Your<br><span class="grad-text">Career Already Earned</span></h1>
-    <p class="hero-sub">The exact system Troy Williams used to earn a <strong>fully accredited Bachelor's degree</strong> in <strong>4 months</strong>, for under <strong>$500</strong> - without quitting his job.</p>
-    <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="glow-btn">
-      ⚡ Get Instant Access - $37
-    </a>
-    <p class="hero-note">One-time payment · Instant download · No subscription · All sales final</p>
-  </section>
-
-  <div class="proof-bar">
-    <span>✅ Fully Accredited</span> &nbsp;·&nbsp; <span>✅ Works While Employed</span> &nbsp;·&nbsp; <span>✅ Based on Real Personal Experience</span> &nbsp;·&nbsp; <span>✅ Cost Varies — See FAQ</span>
+<section id="proof" class="proof"><div class="wrap">
+  <h2>Proof</h2>
+  <div class="two">
+    <figure><img src="/images/dip_red.jpg" width="792" height="612" loading="lazy" alt="WGU diploma for Troy A. Williams, Bachelor of Science, Healthcare Administration, conferred October 1, 2025. Document code blurred."><figcaption>My WGU diploma, conferred October 1, 2025. Document code blurred for privacy.</figcaption></figure>
+    <figure><img src="/images/grad.jpg" width="1260" height="381" loading="lazy" alt="WGU graduation screen for Troy Williams, Bachelor of Science, Healthcare Administration"><figcaption>The graduation screen from my WGU portal.</figcaption></figure>
   </div>
+</div></section>
 
-  <section class="stats">
-    <div class="container-wide">
-      <div class="stats-grid">
-        <div class="fade-up">
-          <div class="stat-num grad-text" data-target="4" data-suffix=" months">0</div>
-          <div class="stat-label">Troy's time to graduation</div>
-        </div>
-        <div class="fade-up fade-up-delay-1">
-          <div class="stat-num grad-text" data-target="500" data-prefix="<$" data-suffix="">0</div>
-          <div class="stat-label">Troy's out-of-pocket cost (with Pell Grant)</div>
-        </div>
-        <div class="fade-up fade-up-delay-2">
-          <div class="stat-num grad-text" data-target="60" data-suffix=" credits">0</div>
-          <div class="stat-label">Transferred before enrolling</div>
-        </div>
-        <div class="fade-up fade-up-delay-3">
-          <div class="stat-num grad-text" data-target="1" data-suffix=" semester">0</div>
-          <div class="stat-label">Paid at WGU</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="inside"><div class="wrap">
+  <h2>What's inside</h2>
+  <div class="inside">
+    <div><h3>The guide</h3><p>How Sophia-to-WGU transfer works, a step-by-step plan, the Healthcare Administration course map, and notes on WGU business and IT programs. Dated so you know when it was last checked.</p></div>
+    <div><h3>The progress tracker</h3><p>A spreadsheet with a dashboard, Sophia and WGU course trackers, key dates, troubleshooting and an after-graduation checklist.</p></div>
+    <div><h3>90 days of check-in emails</h3><p>12 emails over 90 days: day-one steps, weekly check-ins, timeline planning, and what to do when life knocks you off track.</p></div>
+    <div><h3>Using AI to study, honestly</h3><p>How to use ChatGPT or Claude to quiz yourself, check drafts against rubrics and prep for assessments. You do the work. AI helps you learn faster.</p></div>
+  </div>
+  <p class="note">The honest-work promise: some services offer to take WGU exams or write papers for you. That's academic misconduct and can cost you the degree. This guide only shows you how to plan, study and finish yourself.</p>
+</div></section>
 
-  <section class="problem">
-    <div class="container">
-      <div class="label fade-up">Sound Familiar?</div>
-      <h2 class="fade-up">You've Earned It -<br><span class="grad-text">You Just Don't Have the Paper</span></h2>
-      <p class="fade-up">You've been grinding in your field for years. You're competent. Dependable. You get results. But every time a promotion comes up, a better job opens, or a salary negotiation happens - the degree question comes up.</p>
-      <ul class="pain-list">
-        <li class="pain-item fade-up"><span class="pain-icon">😤</span><span class="pain-text">You've been passed over for promotions by people with less experience and a piece of paper</span></li>
-        <li class="pain-item fade-up fade-up-delay-1"><span class="pain-icon">💸</span><span class="pain-text">You can't stomach the idea of $40k–$100k in student debt for a 4-year degree</span></li>
-        <li class="pain-item fade-up fade-up-delay-2"><span class="pain-icon">⏳</span><span class="pain-text">You don't have 4 years - you have a job, bills, and a life to run</span></li>
-        <li class="pain-item fade-up fade-up-delay-3"><span class="pain-icon">🤷</span><span class="pain-text">You've looked into online degrees but have no idea which ones are worth it or how to fast-track them</span></li>
-        <li class="pain-item fade-up fade-up-delay-4"><span class="pain-icon">🚫</span><span class="pain-text">Traditional college feels like starting over - and it basically is</span></li>
-      </ul>
-    </div>
-  </section>
+<section id="pricing"><div class="wrap">
+  <h2>Pricing</h2>
+  <div class="price-card">
+    <h3>Guide + Tracker</h3>
+    <p class="price">$37</p>
+    <p>The guide, the tracker and the 90-day emails. One-time payment through Stripe. Instant download.</p>
+    <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
+    <p class="fine">14-day refund for buyers who've started.</p>
+  </div>
+  <p class="soon">Coaching is coming soon. Want to hear first? Email <a href="mailto:troy@missingdegree.com?subject=Coaching%20waitlist">troy@missingdegree.com</a>.</p>
+</div></section>
 
-  <section class="story">
-    <div class="container">
-      <div class="label fade-up">The Author's Story</div>
-      <h2 class="fade-up">How Troy Did It in <span class="grad-text">4 Months</span></h2>
-      <p class="fade-up" style="color:var(--gray); max-width:680px">Troy Williams is an employment specialist with a BS in Healthcare Administration. He didn't spend 4 years in a classroom to get it.</p>
-      <div class="story-card fade-up">
-        <p>"I had years of real work experience in healthcare and social services, but every job that I worked in those fields hit a wall. The position above me asked for a degree I didn't have. I wasn't going back to traditional college. I discovered a post where someone obtained a Bachelor's Degree in Cybersecurity in 6 months and thought to myself "What other degrees can be done?"."</p>
-        <p>"In April I started on Sophia tackling courses, my car broke down and I spent 2 weeks dealing with it losing my motivation. After I got a new car and could focus again, I knocked the rest of my transferable credits on Sophia Learning. The entire 60 credits took me 2 months. In July I enrolled at WGU with those credits already applied, started college August 1st and finished with my Bachelor's Degree in Healthcare Administration on October 1st. Total cost: under $500 thanks to the Pell Grant. Total time: 4 months."</p>
-        <div class="story-author">
-          <div class="author-avatar">TW</div>
-          <div>
-            <div class="author-name">Troy Williams</div>
-            <div class="author-title">BS Healthcare Administration · WGU Graduate</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="costs"><div class="wrap">
+  <h2>What it really costs</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th scope="col">Scenario</th><th scope="col">Sophia</th><th scope="col">WGU term</th><th scope="col">Out of pocket</th></tr></thead>
+    <tbody>
+      <tr><td>Pell-eligible, 1 term (my path)</td><td>$198</td><td>$4,050</td><td>about $500</td></tr>
+      <tr><td>No aid, 1 term</td><td>$198</td><td>$4,050</td><td>$4,250</td></tr>
+      <tr><td>No aid, 2 terms</td><td>$198</td><td>$8,100</td><td>$8,300</td></tr>
+    </tbody>
+  </table></div>
+  <p class="fine">Estimates. WGU charges a flat rate per 6-month term: undergraduate business programs list $3,850 tuition plus a $200 resources fee for terms starting on or after January 1, 2026, and IT programs run $3,925 to $4,425. WGU has posted new rates for terms starting October 1, 2026. Sophia assumes 2 months at $99.</p>
+  <p class="note"><strong>Check current prices.</strong> Tuition, Pell amounts and transfer rules change. Confirm current numbers at <a href="https://www.wgu.edu/financial-aid-tuition.html">wgu.edu</a> and <a href="https://studentaid.gov">studentaid.gov</a> before you enroll. Figures last checked October 2026.</p>
+</div></section>
 
-  <section class="timeline">
-    <div class="container">
-      <div class="label fade-up">The Fast-Track Timeline</div>
-      <h2 class="fade-up">4 Months. <span class="grad-text">One Real Degree.</span></h2>
-      <div class="tl-grid">
-        <div class="tl-card fade-up">
-          <div class="tl-month-badge">Months 1-2</div>
-          <h3>Sophia Learning</h3>
-          <p>Complete transferable credits for $99/month, submit official transcript to WGU via Credly (free)</p>
-        </div>
-        <div class="tl-card fade-up fade-up-delay-2">
-          <div class="tl-month-badge">Month 3</div>
-          <h3>Enroll at WGU</h3>
-          <p>Start at WGU with credits already applied - only complete what's left using competency-based testing</p>
-        </div>
-        <div class="tl-card fade-up fade-up-delay-3">
-          <div class="tl-month-badge">Month 4</div>
-          <h3>Graduate 🎓</h3>
-          <p>Finish remaining WGU courses, apply for graduation. Fully accredited BS degree in hand.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="faq"><div class="wrap narrow">
+  <h2>Questions</h2>
+  <details><summary>Is 4 months realistic for most people?</summary><p>Not for everyone. It worked for me with transfer credits, a clear plan, a sales background that matched the material, and steady effort. Many people take two terms. The goal is as few terms as you can manage.</p></details>
+  <details><summary>How many Sophia courses will I need?</summary><p>I took 19. WGU's transfer list changes, so check WGU's partner page and your enrollment counselor for the current list for your program.</p></details>
+  <details><summary>Is WGU accredited?</summary><p>Yes, by the Northwest Commission on Colleges and Universities (NWCCU).</p></details>
+  <details><summary>Are you affiliated with WGU or Sophia?</summary><p>No. Missing Degree is independent and isn't endorsed by either. Their names are used only to describe them.</p></details>
+  <details><summary>Do I need to quit my job?</summary><p>No. Both are online and self-paced. I worked full-time the whole way.</p></details>
+  <details><summary>What if I don't qualify for Pell?</summary><p>Plan on about $4,250 for a one-term path. The guide covers scholarships and other options.</p></details>
+  <details><summary>What if I lose motivation?</summary><p>You probably will at some point. I did. The 90-day emails are built for that week, and the guide has a section on getting restarted.</p></details>
+</div></section>
 
-  <section class="features">
-    <div class="container">
-      <div class="label fade-up">What's Inside</div>
-      <h2 class="fade-up">Everything You Need to <span class="grad-text">Execute the Plan</span></h2>
-      <div class="features-grid">
-        <div class="feature-card fade-up"><div class="feature-icon">🗺️</div><h3>The Complete Roadmap</h3><p>Step-by-step from day one to graduation - no guessing, no wasted credits, no confusion</p></div>
-        <div class="feature-card fade-up fade-up-delay-1"><div class="feature-icon">📋</div><h3>Degree-Specific Playbooks</h3><p>Courses to take for all 21 WGU Business and Technology degrees - mapped to transfer requirements</p></div>
-        <div class="feature-card fade-up fade-up-delay-2"><div class="feature-icon">🤖</div><h3>The LLM Acceleration System</h3><p>How to use AI tools to cut study time dramatically - prep for milestones, ace assessments, polish written work</p></div>
-        <div class="feature-card fade-up fade-up-delay-3"><div class="feature-icon">💰</div><h3>Financial Aid Blueprint</h3><p>How Pell Grants and federal loans work with WGU - for some students, WGU tuition is $0 out of pocket</p></div>
-        <div class="feature-card fade-up fade-up-delay-4"><div class="feature-icon">📊</div><h3>Progress Tracker Spreadsheet</h3><p>Google Sheets tracker with Sophia course tracker, WGU course tracker, financial aid calculator, and troubleshooting guide</p></div>
-        <div class="feature-card fade-up fade-up-delay-5"><div class="feature-icon">🔄</div><h3>2026 Policy Update</h3><p>WGU changed some transfer rules in 2026 - the guide covers exactly what still works and what to avoid</p></div>
-      </div>
-    </div>
-  </section>
+<section id="refund"><div class="wrap narrow">
+  <h2>Refund policy</h2>
+  <p>If the guide isn't helpful, email within 14 days of purchase and show that you started: your Sophia enrollment, your WGU application, or a filled-in tracker. You'll get a full refund. Technical problems are always fixed, no matter when.</p>
+  <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
+</div></section>
+</main>
 
-  <section class="for-section">
-    <div class="container">
-      <div class="label fade-up">Is This For You?</div>
-      <h2 class="fade-up">This Guide Is For You If <span class="grad-text">You're Ready</span></h2>
-      <div class="for-grid">
-        <div class="for-item fade-up"><div class="for-check">✓</div><div class="for-text">You have real work experience but no bachelor's degree</div></div>
-        <div class="for-item fade-up fade-up-delay-1"><div class="for-check">✓</div><div class="for-text">You can't afford or don't want to spend 4 years in traditional college</div></div>
-        <div class="for-item fade-up fade-up-delay-2"><div class="for-check">✓</div><div class="for-text">You need a degree that's fully accredited and recognized by employers</div></div>
-        <div class="for-item fade-up fade-up-delay-3"><div class="for-check">✓</div><div class="for-text">You're self-motivated and can work independently</div></div>
-        <div class="for-item fade-up fade-up-delay-4"><div class="for-check">✓</div><div class="for-text">You're targeting fields like Business, Healthcare, IT, or Management</div></div>
-        <div class="for-item fade-up fade-up-delay-5"><div class="for-check">✓</div><div class="for-text">You want a clear, proven plan - not vague advice</div></div>
-      </div>
-    </div>
-  </section>
+<footer><div class="wrap">
+  <p><strong>Contact:</strong> <a href="mailto:troy@missingdegree.com">troy@missingdegree.com</a>. Replies within 1 to 2 business days.</p>
+  <p>Missing Degree is an independent educational resource, not affiliated with WGU or Sophia Learning. Results vary and aren't guaranteed. Prices and policies change, so check with each school. Not academic, financial or legal advice.</p>
+  <p>© 2026 Missing Degree. <a href="#privacy" id="privacyLink">Privacy</a>. <a href="#refund">Refunds</a>. <a href="mailto:troy@missingdegree.com">Contact</a>.</p>
+</div></footer>
 
-  <section class="pricing">
-    <div class="container">
-      <div class="label fade-up" style="margin: 0 auto 20px; display:table">Simple Pricing</div>
-      <h2 class="fade-up" style="text-align:center">One Price. <span class="grad-text">Lifetime Access.</span></h2>
-      <div class="price-box fade-up">
-        <div class="price-tag-label">The Missing Piece Guide + Tracker</div>
-        <div class="price-amount grad-text"><sup>$</sup>37</div>
-        <div class="price-strike">Regular price $97</div>
-        <ul class="price-features">
-          <li class="pf-item"><span class="pf-check">✓</span> Complete WGU + Sophia fast-track system</li>
-          <li class="pf-item"><span class="pf-check">✓</span> All 21 degree playbooks (Business + Technology)</li>
-          <li class="pf-item"><span class="pf-check">✓</span> LLM acceleration strategies</li>
-          <li class="pf-item"><span class="pf-check">✓</span> Financial aid & Pell Grant guide</li>
-          <li class="pf-item"><span class="pf-check">✓</span> Progress tracker spreadsheet</li>
-          <li class="pf-item"><span class="pf-check">✓</span> 90-day accountability email sequence</li>
-          <li class="pf-item"><span class="pf-check">✓</span> 2026 policy update included</li>
-          <li class="pf-item"><span class="pf-check">✓</span> Instant access, keep forever</li>
-        </ul>
-        <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="glow-btn" style="width:100%; justify-content:center">
-          ⚡ Get Instant Access - $37
-        </a>
-        <p class="price-note">🔒 Secure checkout via Stripe · One-time payment · No recurring charges · All sales final</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="faq">
-    <div class="container">
-      <div class="label fade-up">FAQ</div>
-      <h2 class="fade-up">Common <span class="grad-text">Questions</span></h2>
-      <div class="faq-list fade-up">
-        <div class="faq-item">
-          <div class="faq-q">Is WGU actually accredited?</div>
-          <div class="faq-a">Yes. WGU is regionally accredited by the Northwest Commission on Colleges and Universities (NWCCU) - the same type of accreditation as traditional state universities. Employers and graduate programs recognize it.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Can I really finish in 4 months?</div>
-          <div class="faq-a">Troy did it. Others in the WGU community have done it in similar or shorter timeframes. It depends on how aggressively you work through Sophia and how quickly you demonstrate competency at WGU. The guide gives you the system - your pace determines your timeline. Results vary.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">What does it actually cost?</div>
-          <div class="faq-a">Sophia Learning is $99/month. One WGU semester runs roughly $3,755–$4,500 depending on your program. Pell Grant recipients may have WGU costs covered entirely. Total realistic out-of-pocket: $200–$5,000 depending on your financial aid eligibility.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">How did Troy get his degree for under $500?</div>
-          <div class="faq-a">Troy's out-of-pocket cost was under $500 because he qualified for the Pell Grant, which covered most of his WGU tuition. Without financial aid, expect $4,000-$5,000 total. The guide includes a full section on maximizing financial aid - for eligible students, WGU can cost almost nothing.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Do I need to quit my job?</div>
-          <div class="faq-a">No. Both Sophia and WGU are fully online and self-paced. Troy completed this while working full time. Evenings and weekends are enough.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">What degrees can I get this way?</div>
-          <div class="faq-a">The guide covers all 9 WGU Business degrees and all 12 WGU Technology degrees — 21 programs total, each with a dedicated section showing what Sophia covers and what stays at WGU.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">What is your refund policy?</div>
-          <div class="faq-a">All sales are final due to the instant digital delivery of this product. If you experience a technical issue accessing your files, email troy@missingdegree.com within 48 hours and I will resolve it promptly.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">What if I've never heard of WGU or Sophia?</div>
-          <div class="faq-a">The guide assumes zero prior knowledge. It explains both platforms, how transfers work, and walks you through every step from account creation to graduation application.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="final-cta">
-    <div class="container">
-      <h2 class="fade-up">Stop Waiting.<br><span class="grad-text">Start Finishing.</span></h2>
-      <p class="fade-up">The degree isn't out of reach - you just needed the right map. For $37, you get the exact system that worked. One time. No fluff.</p>
-      <a href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02" class="glow-btn fade-up">
-        ⚡ Get Instant Access - $37
-      </a>
-      <p style="margin-top:20px; font-size:0.8rem; color:#334155;" class="fade-up">One-time payment · Instant access · Secure checkout via Stripe · All sales final</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Troy Williams · <em>The Missing Piece</em> · All rights reserved</p>
-    <p style="margin-top:6px">Results vary. WGU and Sophia transfer policies are subject to change. Always verify current articulations at partners.wgu.edu.</p>
-    <p style="margin-top:8px">
-      <a href="#" onclick="document.getElementById('privacyModal').classList.add('open'); return false;">Privacy Policy & No-Refund Policy</a>
-    </p>
-  </footer>
-
-  <script>
-    const stickyBtn = document.getElementById('stickyBtn');
-    window.addEventListener('scroll', () => {
-      stickyBtn.classList.toggle('visible', window.scrollY > 600);
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    // ANIMATED NUMBERS
-    const numObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const el = e.target;
-        const target = parseInt(el.dataset.target);
-        const prefix = el.dataset.prefix || '';
-        const suffix = el.dataset.suffix || '';
-        let current = 0;
-        const step = Math.ceil(target / 40);
-        const timer = setInterval(() => {
-          current = Math.min(current + step, target);
-          el.textContent = prefix + current + suffix;
-          if (current >= target) clearInterval(timer);
-        }, 40);
-        numObserver.unobserve(el);
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('[data-target]').forEach(el => numObserver.observe(el));
-
-    // Close privacy modal on backdrop click
-    document.getElementById('privacyModal').addEventListener('click', function(e) {
-      if (e.target === this) this.classList.remove('open');
-    });
-  </script>
+<dialog id="privacyModal" aria-labelledby="privacyTitle">
+  <button class="close" type="button" id="privacyClose">Close</button>
+  <h2 id="privacyTitle">Privacy Policy</h2>
+  <p class="fine">Last updated: October 22, 2026</p>
+  <h3>What I collect</h3>
+  <p>When you buy from missingdegree.com, your name and email are collected by Stripe to deliver your purchase and send the 90-day emails. Card details are handled by Stripe and never seen or stored by me.</p>
+  <h3>How I use it</h3>
+  <p>Your name and email are used to deliver your files and send the check-in email sequence included with your purchase. I never sell your information.</p>
+  <h3>Email</h3>
+  <p>The 90-day sequence is part of the product. Unsubscribe anytime using the link in any email and keep the guide.</p>
+  <h3>Services used</h3>
+  <p>Stripe (payments), MailerLite (email), Zapier (automation), Vercel (hosting) and Google Drive (file delivery). Each handles data under its own privacy policy.</p>
+  <h3>Refunds</h3>
+  <p>Email within 14 days of purchase and show that you started for a full refund. Technical problems are always fixed.</p>
+  <h3>Contact</h3>
+  <p><a href="mailto:troy@missingdegree.com">troy@missingdegree.com</a></p>
+</dialog>
+<script>
+(function(){var d=document.getElementById('privacyModal');
+function open(e){if(e)e.preventDefault();if(d.showModal)d.showModal();else d.setAttribute('open','');}
+document.getElementById('privacyLink').addEventListener('click',open);
+document.getElementById('privacyClose').addEventListener('click',function(){d.close();});
+if(location.hash==='#privacy')open();})();
+</script>
 </body>
 </html>
