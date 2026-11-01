@@ -160,17 +160,15 @@ dialog h3{margin-top:1.2em}
 </div></section>
 
 <section id="checklist" class="signup"><div class="wrap narrow">
-  <span class="ph">PLACEHOLDER COPY</span>
-  <h2>Free degree-planning checklist</h2>
-  <p>PLACEHOLDER: one or two lines on what the checklist covers. Final copy coming from Marketing.</p>
+  <h2>Free: Missing Degree Degree Planning Checklist</h2>
+  <p>If you're a working adult who has put off a degree because it feels too slow or too expensive, you're not alone. There is another route. This checklist walks you through the same planning steps Troy used. Work through it one phase at a time and check things off as you go.</p>
   <form id="mlForm" action="https://assets.mailerlite.com/jsonp/2231507/forms/202959078722373566/subscribe" method="post">
     <label class="skip" for="mlEmail">Email address</label>
     <input id="mlEmail" type="email" name="fields[email]" placeholder="you@example.com" required autocomplete="email">
     <input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">
     <button class="btn" type="submit">Send me the checklist</button>
   </form>
-  <p class="msg" id="mlMsg" hidden>PLACEHOLDER: Thanks! Check your inbox to confirm your email.</p>
-  <p class="fine">PLACEHOLDER: No spam. Unsubscribe anytime.</p>
+  <p class="msg" id="mlMsg" hidden>Thanks! Check your inbox to confirm your email.</p>
 </div></section>
 <script>(function(){var f=document.getElementById('mlForm');f.addEventListener('submit',function(e){e.preventDefault();fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(){f.hidden=true;document.getElementById('mlMsg').hidden=false;if(window.va)va('event',{name:'checklist_signup'});}).catch(function(){f.submit();});});})();</script>
 
