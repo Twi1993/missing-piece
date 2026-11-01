@@ -73,7 +73,15 @@ dialog{max-width:680px;width:92vw;border:1px solid var(--line);border-radius:10p
 dialog::backdrop{background:rgba(0,0,0,.45)}
 dialog h3{margin-top:1.2em}
 .close{float:right;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit}
+.signup{background:var(--accent-soft)}
+.signup form{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.signup input[type=email]{flex:1 1 260px;min-height:48px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font:inherit;background:var(--paper);color:var(--ink)}
+.signup button{border:0;cursor:pointer;font:inherit}
+.signup .ph{display:inline-block;background:#c98a1b;color:#fff;font-size:.8rem;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:8px}
+.signup .msg{margin-top:12px;font-weight:600}
 </style>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -150,6 +158,21 @@ dialog h3{margin-top:1.2em}
   </div>
   <p class="note">The honest-work promise: some services offer to take WGU exams or write papers for you. That's academic misconduct and can cost you the degree. This guide only shows you how to plan, study and finish yourself.</p>
 </div></section>
+
+<section id="checklist" class="signup"><div class="wrap narrow">
+  <span class="ph">PLACEHOLDER COPY</span>
+  <h2>Free degree-planning checklist</h2>
+  <p>PLACEHOLDER: one or two lines on what the checklist covers. Final copy coming from Marketing.</p>
+  <form id="mlForm" action="https://assets.mailerlite.com/jsonp/2231507/forms/202959078722373566/subscribe" method="post">
+    <label class="skip" for="mlEmail">Email address</label>
+    <input id="mlEmail" type="email" name="fields[email]" placeholder="you@example.com" required autocomplete="email">
+    <input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">
+    <button class="btn" type="submit">Send me the checklist</button>
+  </form>
+  <p class="msg" id="mlMsg" hidden>PLACEHOLDER: Thanks! Check your inbox to confirm your email.</p>
+  <p class="fine">PLACEHOLDER: No spam. Unsubscribe anytime.</p>
+</div></section>
+<script>(function(){var f=document.getElementById('mlForm');f.addEventListener('submit',function(e){e.preventDefault();fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(){f.hidden=true;document.getElementById('mlMsg').hidden=false;if(window.va)va('event',{name:'checklist_signup'});}).catch(function(){f.submit();});});})();</script>
 
 <section id="pricing"><div class="wrap">
   <h2>Pricing</h2>
