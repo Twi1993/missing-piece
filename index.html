@@ -7,78 +7,69 @@
 <meta name="description" content="A plain-English roadmap for working adults: Sophia Learning for transfer credits, WGU's self-paced model to finish, and AI tools to study smarter.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f8f4ec;--paper:#fffdf8;--ink:#1d1c1a;--muted:#5b5750;--line:#e3dccd;--accent:#1f4d3a;--accent-ink:#fff;--accent-soft:#e4ede6}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Source Sans 3",system-ui,sans-serif}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:650;line-height:1.15;margin:0 0 .5em}
-h1{font-size:clamp(2.1rem,5vw,3.4rem);letter-spacing:-.01em}
-h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
-h3{font-size:1.2rem}
-p{margin:0 0 1em}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #c98a1b;outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
-.narrow{max-width:700px}
-.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;z-index:10}
-header.top{border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:14px;padding-bottom:14px}
-.brand{font-family:Fraunces,Georgia,serif;font-weight:650;font-size:1.25rem;text-decoration:none;color:var(--ink)}
-.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:14px 26px;border-radius:6px;min-height:48px}
-.btn:hover{background:#163a2b}
-.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent);margin-left:8px}.btn.alt:hover{background:var(--accent);color:var(--accent-ink)}
-.btn.small{padding:9px 16px;min-height:auto;font-size:.95rem}
-section{padding:64px 0;border-bottom:1px solid var(--line)}
-.hero{padding:72px 0 56px}
-.hero .lede{font-size:1.2rem;color:var(--muted);max-width:640px}
-.fine{font-size:.92rem;color:var(--muted);margin-top:12px}
-.hero-img{margin-top:40px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
-.hero-img img{display:block;width:100%;height:auto}
-figcaption{font-size:.9rem;color:var(--muted);padding:10px 14px;background:var(--paper)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-@media (max-width:760px){.two{grid-template-columns:1fr}}
-.panel{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:24px}
-ul.check,ul.cross{list-style:none;padding:0;margin:0}
-ul.check li,ul.cross li{padding:6px 0 6px 28px;position:relative}
-ul.check li::before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
-ul.cross li::before{content:"×";position:absolute;left:2px;color:#9a3b2a;font-weight:700}
-.timeline{border-left:3px solid var(--accent);margin:28px 0;padding-left:22px}
-.timeline div{margin-bottom:12px}
-.timeline b{display:inline-block;min-width:120px}
-blockquote{margin:32px 0;padding:22px 26px;background:var(--accent-soft);border-radius:8px;font-family:Fraunces,Georgia,serif;font-size:1.25rem;line-height:1.4}
-blockquote p:last-child{margin:0}
-.proof figure{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
-.proof img{display:block;width:100%;height:auto}
-.inside{display:grid;gap:0}
-.inside div{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
-@media (max-width:640px){.inside div{grid-template-columns:1fr;gap:4px}}
-.price-card{background:var(--paper);border:2px solid var(--accent);border-radius:10px;padding:30px;max-width:520px}
-.price{font-family:Fraunces,Georgia,serif;font-size:3rem;font-weight:650;margin:0}
-.soon{color:var(--muted);margin-top:22px}
-table{width:100%;border-collapse:collapse;background:var(--paper);font-size:1rem}
-th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-th{font-weight:600}
-.tablewrap{overflow-x:auto}
-.note{background:var(--paper);border-left:4px solid #c98a1b;padding:14px 18px;margin-top:20px;font-size:.98rem}
-details{border-top:1px solid var(--line);padding:16px 0}
-details:last-of-type{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;font-weight:600;font-size:1.08rem}
-details p{margin-top:10px}
-footer{padding:44px 0;font-size:.95rem;color:var(--muted)}
-footer a{color:var(--muted)}
-dialog{max-width:680px;width:92vw;border:1px solid var(--line);border-radius:10px;padding:28px;background:var(--paper);color:var(--ink)}
-dialog::backdrop{background:rgba(0,0,0,.45)}
-dialog h3{margin-top:1.2em}
-.close{float:right;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;font:inherit}
-.signup{background:var(--accent-soft)}
-.signup form{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.signup input[type=email]{flex:1 1 260px;min-height:48px;padding:12px 14px;border:1px solid var(--line);border-radius:6px;font:inherit;background:var(--paper);color:var(--ink)}
-.signup button{border:0;cursor:pointer;font:inherit}
-.signup .ph{display:inline-block;background:#c98a1b;color:#fff;font-size:.8rem;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:8px}
-.signup .msg{margin-top:12px;font-weight:600}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.65 var(--fb);overflow-x:hidden}
+h1,h2,h3{font-family:var(--fh);line-height:1.1;margin:0 0 .5em}
+p{margin:0 0 1em}a{color:var(--link,var(--accent))}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--focus,#e0a11b);outline-offset:3px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}.narrow{max-width:760px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:#fff;color:#000;padding:8px 12px;z-index:100}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;padding-bottom:14px}
+.brand{text-decoration:none;color:var(--ink);font-family:var(--fh);font-weight:700;font-size:1.25rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;min-height:50px;padding:14px 26px;cursor:pointer;font-family:inherit;font-size:1rem}
+.btn.small{min-height:auto;padding:9px 16px;font-size:.92rem}
+.hero .btn{margin:6px 10px 6px 0}
+.hero-img,.proof figure{margin:0}.hero-img{margin-top:48px}
+.hero-img img,.proof img{display:block;width:100%;height:auto}
+figcaption{font-size:.88rem;padding:10px 14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.inside{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.price-card{display:flex;flex-direction:column}.price-card .btn{margin-top:auto;align-self:flex-start}
+@media (max-width:780px){.two,.inside,.prices{grid-template-columns:1fr}}
+ul.check,ul.cross{list-style:none;padding:0;margin:0 0 20px}
+ul.check li,ul.cross li{padding:7px 0 7px 30px;position:relative}
+ul.check li::before{content:"✓";position:absolute;left:0;font-weight:800;color:var(--accent)}
+ul.cross li::before{content:"×";position:absolute;left:2px;font-weight:800;color:#c0392b}
+.timeline{margin:32px 0}.timeline b{display:inline-block;min-width:130px}
+.price{font-family:var(--fh);font-size:3.6rem;line-height:1;margin:6px 0 16px}
+.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:520px}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line)}
+.fine{font-size:.9rem;opacity:.8;margin-top:12px}
+.note{padding:16px 20px;margin-top:22px;font-size:.98rem}
+details{padding:16px 0;border-top:1px solid var(--line)}summary{cursor:pointer;font-weight:700;font-size:1.08rem}details p{margin-top:10px}
+footer{padding:56px 0;font-size:.92rem}footer a{color:inherit}
+dialog{max-width:680px;width:92vw;padding:30px;background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+dialog::backdrop{background:rgba(0,0,0,.55)}.close{float:right;background:none;border:1px solid var(--line);color:inherit;padding:6px 12px;cursor:pointer;font:inherit}
+.signup form{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.signup input[type=email]{flex:1 1 260px;min-height:50px;padding:12px 16px;font:inherit;border:1px solid var(--line);background:#fff;color:#111}
+.signup .msg{margin-top:12px;font-weight:700}
+section{padding:96px 0}@media (max-width:640px){section{padding:64px 0}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+:root{--bg:#fbfaf7;--ink:#141414;--line:#dedbd2;--accent:#141414;--fh:"Instrument Serif",Georgia,serif;--fb:"Inter",system-ui,sans-serif;--link:#141414}
+h1,h2,h3{font-weight:400;letter-spacing:-.02em}
+h1{font-size:clamp(3.2rem,9vw,7.8rem);line-height:.95}h1 em{font-style:italic;color:#8a6d3b}
+h2{font-size:clamp(2.4rem,5.5vw,4.4rem)}h3{font-size:1.7rem}
+header.top{border-bottom:1px solid var(--ink)}.brand{font-weight:400;font-size:1.6rem}
+.btn{background:var(--ink);color:#fbfaf7;border-radius:0;border:1px solid var(--ink)}.btn:hover{background:#8a6d3b;border-color:#8a6d3b}
+.btn.alt{background:transparent;color:var(--ink)}.btn.alt:hover{background:var(--ink);color:#fff}
+.hero{padding:110px 0 70px}.hero .lede{font-size:1.3rem;max-width:620px;color:#444;margin:28px 0}
+.hero-img{border-top:1px solid var(--ink);padding-top:22px}figcaption{padding-left:0;font-style:italic;color:#666}
+section{border-top:1px solid var(--line)}
+section h2.reveal::before{content:"§";display:block;font-size:1.2rem;color:#8a6d3b;margin-bottom:10px}
+.panel{border-top:2px solid var(--ink);padding-top:20px}
+.timeline{border-left:1px solid var(--ink);padding-left:26px}.timeline div{padding:8px 0}.timeline b{font-family:var(--fh);font-size:1.3rem;font-weight:400}
+blockquote{margin:56px 0;font:italic 400 clamp(1.8rem,3.6vw,2.8rem)/1.2 var(--fh);border:0;padding:0}
+blockquote::before{content:"C";display:block;font-size:5rem;line-height:.6;color:#8a6d3b}
+.inside div{border-top:1px solid var(--ink);padding-top:18px}
+.price-card{border:1px solid var(--ink);padding:36px}.price-card.feat{background:#141414;color:#fbfaf7}.price-card.feat .btn{background:#fbfaf7;color:#141414}.price-card.feat ul.check li::before{color:#d9b77a}
+.note{border-left:3px solid #8a6d3b;background:#f2efe7}
+.signup{background:#141414;color:#fbfaf7}.signup h2{color:#fbfaf7}.signup .btn{background:#d9b77a;color:#141414;border-color:#d9b77a}
+footer{border-top:1px solid var(--ink)}
 </style>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -92,7 +83,7 @@ dialog h3{margin-top:1.2em}
 
 <main id="main">
 <section class="hero"><div class="wrap">
-  <h1>Yes, it's a shortcut. You still have to do the work.</h1>
+  <h1>Yes, it's a shortcut. <em>You still have to do the work.</em></h1>
   <p class="lede">A plain-English roadmap for working adults: Sophia Learning for transfer credits, WGU's self-paced model to finish, and AI tools to study smarter. I did it while working full-time, for about $500 out of pocket.</p>
   <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
   <a class="btn alt" href="https://buy.stripe.com/5kQ14nbiU3cr41XaqM6EU03">$49 coaching call, includes the guide + tracker</a>
@@ -104,8 +95,8 @@ dialog h3{margin-top:1.2em}
 </div></section>
 
 <section id="fit"><div class="wrap">
-  <h2>Is this for you?</h2>
-  <div class="two">
+  <h2 class="reveal">Is this for you?</h2>
+  <div class="two reveal">
     <div class="panel"><h3>This is for you if</h3><ul class="check">
       <li>You have work experience but no bachelor's degree.</li>
       <li>You keep hitting "degree required" on job posts or promotions.</li>
@@ -123,11 +114,11 @@ dialog h3{margin-top:1.2em}
 </div></section>
 
 <section id="story"><div class="wrap narrow">
-  <h2>How I did it</h2>
+  <h2 class="reveal">How I did it</h2>
   <p>I had no healthcare experience. My career has been in sales and social services, and everything I know about healthcare I learned through WGU. Sales turned out to be my advantage. My degree was a business degree, and a lot of what WGU tested me on, I had already learned on the job: negotiating, managing accounts, reading people, hitting numbers.</p>
   <p>In April 2025 I started on Sophia Learning to knock out transfer credits. Two weeks in, my car broke down. It took two weeks to get it fixed, and it killed my motivation. I stopped. That was the real test, not any exam.</p>
   <p>I got past that mental block by keeping one thought in front of me: once this degree is done, it's done. Nobody can take it back, and I never have to do it again. So I went back to work.</p>
-  <div class="timeline" aria-label="Timeline">
+  <div class="timeline reveal" aria-label="Timeline">
     <div><b>April 2025</b> Started Sophia Learning</div>
     <div><b>Spring 2025</b> Finished 19 Sophia courses</div>
     <div><b>July 2025</b> Enrolled at WGU</div>
@@ -136,25 +127,25 @@ dialog h3{margin-top:1.2em}
   </div>
   <p>Four months of hard work, then finished. At least until my master's.</p>
   <p>Along the way, my WGU courses got me hooked on supply chain. Today I work as a logistics professional, and I wrote this guide so you can skip the months of digging I did and spend that energy on the work itself.</p>
-  <blockquote><p>Keep your mental game up. Something will knock you off track: a car, a kid, a bad week at work. Plan for it. The people who finish aren't the ones who never stop. They're the ones who start again.</p></blockquote>
+  <blockquote class="reveal"><p>Keep your mental game up. Something will knock you off track: a car, a kid, a bad week at work. Plan for it. The people who finish aren't the ones who never stop. They're the ones who start again.</p></blockquote>
   <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
 </div></section>
 
 <section id="proof" class="proof"><div class="wrap">
-  <h2>Proof</h2>
-  <div class="two">
+  <h2 class="reveal">Proof</h2>
+  <div class="two reveal">
     <figure><img src="/images/dip_red.jpg" width="792" height="612" loading="lazy" alt="WGU diploma for Troy A. Williams, Bachelor of Science, Healthcare Administration, conferred October 1, 2025. Document code blurred."><figcaption>My WGU diploma, conferred October 1, 2025. Document code blurred for privacy.</figcaption></figure>
     <figure><img src="/images/grad.jpg" width="1260" height="381" loading="lazy" alt="WGU graduation screen for Troy Williams, Bachelor of Science, Healthcare Administration"><figcaption>The graduation screen from my WGU portal.</figcaption></figure>
   </div>
 </div></section>
 
 <section id="inside"><div class="wrap">
-  <h2>What's inside</h2>
+  <h2 class="reveal">What's inside</h2>
   <div class="inside">
-    <div><h3>The guide</h3><p>How Sophia-to-WGU transfer works, a step-by-step plan, Healthcare Administration in depth, plus notes on business and IT Management. Dated so you know when it was last checked.</p></div>
-    <div><h3>The progress tracker</h3><p>A spreadsheet with a dashboard, Sophia and WGU course trackers, key dates, troubleshooting and an after-graduation checklist.</p></div>
-    <div><h3>90 days of check-in emails</h3><p>12 emails over 90 days: day-one steps, weekly check-ins, timeline planning, and what to do when life knocks you off track.</p></div>
-    <div><h3>Using AI to study, honestly</h3><p>How to use ChatGPT or Claude to quiz yourself, check drafts against rubrics and prep for assessments. You do the work. AI helps you learn faster.</p></div>
+    <div class="reveal"><h3>The guide</h3><p>How Sophia-to-WGU transfer works, a step-by-step plan, Healthcare Administration in depth, plus notes on business and IT Management. Dated so you know when it was last checked.</p></div>
+    <div class="reveal"><h3>The progress tracker</h3><p>A spreadsheet with a dashboard, Sophia and WGU course trackers, key dates, troubleshooting and an after-graduation checklist.</p></div>
+    <div class="reveal"><h3>90 days of check-in emails</h3><p>12 emails over 90 days: day-one steps, weekly check-ins, timeline planning, and what to do when life knocks you off track.</p></div>
+    <div class="reveal"><h3>Using AI to study, honestly</h3><p>How to use ChatGPT or Claude to quiz yourself, check drafts against rubrics and prep for assessments. You do the work. AI helps you learn faster.</p></div>
   </div>
   <p class="note">The honest-work promise: some services offer to take WGU exams or write papers for you. That's academic misconduct and can cost you the degree. This guide only shows you how to plan, study and finish yourself.</p>
 </div></section>
@@ -173,15 +164,16 @@ dialog h3{margin-top:1.2em}
 <script>(function(){var f=document.getElementById('mlForm');f.addEventListener('submit',function(e){e.preventDefault();fetch(f.action,{method:'POST',body:new FormData(f)}).then(function(){f.hidden=true;document.getElementById('mlMsg').hidden=false;if(window.va)va('event',{name:'checklist_signup'});}).catch(function(){f.submit();});});})();</script>
 
 <section id="pricing"><div class="wrap">
-  <h2>Pricing</h2>
-  <div class="price-card">
+  <h2 class="reveal">Pricing</h2>
+  <div class="prices">
+  <div class="price-card reveal">
     <h3>Guide + Tracker</h3>
     <p class="price">$37</p>
     <p>The guide, the tracker and the 90-day emails. One-time payment through Stripe. Instant download.</p>
     <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
     <p class="fine">14-day refund for buyers who've started.</p>
   </div>
-  <div class="price-card">
+  <div class="price-card feat reveal">
     <h3>Coaching Call + Guide + Tracker</h3>
     <p class="price">$49</p>
     <p>A 45-minute degree planning call by phone with me, plus the guide and the tracker. Pay through Stripe, then pick your time.</p>
@@ -193,11 +185,12 @@ dialog h3{margin-top:1.2em}
     </ul>
     <a class="btn" href="https://buy.stripe.com/5kQ14nbiU3cr41XaqM6EU03">$49 coaching call, includes the guide + tracker</a>
   </div>
+  </div>
 </div></section>
 
 <section id="costs"><div class="wrap">
-  <h2>What it really costs</h2>
-  <div class="tablewrap"><table>
+  <h2 class="reveal">What it really costs</h2>
+  <div class="tablewrap reveal"><table>
     <thead><tr><th scope="col">Scenario</th><th scope="col">Sophia</th><th scope="col">WGU term</th><th scope="col">Out of pocket</th></tr></thead>
     <tbody>
       <tr><td>Pell-eligible, 1 term (my path)</td><td>$198</td><td>$4,050</td><td>about $500</td></tr>
@@ -210,7 +203,7 @@ dialog h3{margin-top:1.2em}
 </div></section>
 
 <section id="faq"><div class="wrap narrow">
-  <h2>Questions</h2>
+  <h2 class="reveal">Questions</h2>
   <details><summary>Is 4 months realistic for most people?</summary><p>Not for everyone. It worked for me with transfer credits, a clear plan, a sales background that matched the material, and steady effort. Many people take two terms. The goal is as few terms as you can manage.</p></details>
   <details><summary>How many Sophia courses will I need?</summary><p>I took 19. WGU's transfer list changes, so check WGU's partner page and your enrollment counselor for the current list for your program.</p></details>
   <details><summary>Is WGU accredited?</summary><p>Yes, by the Northwest Commission on Colleges and Universities (NWCCU).</p></details>
@@ -221,7 +214,7 @@ dialog h3{margin-top:1.2em}
 </div></section>
 
 <section id="refund"><div class="wrap narrow">
-  <h2>Refund policy</h2>
+  <h2 class="reveal">Refund policy</h2>
   <p>If the guide isn't helpful, email within 14 days of purchase and show that you started: your Sophia enrollment, your WGU application, or a filled-in tracker. You'll get a full refund. Technical problems are always fixed, no matter when.</p>
   <a class="btn" href="https://buy.stripe.com/8x23cv4UwcN141X8iE6EU02">Get the guide, $37</a>
 </div></section>
@@ -256,6 +249,11 @@ function open(e){if(e)e.preventDefault();if(d.showModal)d.showModal();else d.set
 document.getElementById('privacyLink').addEventListener('click',open);
 document.getElementById('privacyClose').addEventListener('click',function(){d.close();});
 if(location.hash==='#privacy')open();})();
+</script>
+<script>
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.1});
+els.forEach(function(e){io.observe(e)});})();
 </script>
 </body>
 </html>
